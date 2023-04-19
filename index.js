@@ -12,7 +12,7 @@ console.log("App en node Iniciada");
 connection();
 
 //crear servidor de node
-const app = express()
+const app = express();
 const port = 3900
 
 //Configurar cors
