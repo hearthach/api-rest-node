@@ -10,7 +10,7 @@ const connection = async() => {
             // useUnifiedTopology: true
             // useCreateIndex: true
 
-            console.log("Conexión de manera Exitosa!!!");
+            console.log("Conexión de manera Exitosa a Mi Blog!!!");
 
     } catch (error) {
         console.log(error);
