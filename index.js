@@ -24,6 +24,28 @@ app.use(cors());
 app.use(express.json());
 
 //Crear rutas
+app.get("/probando", (req, res) => {
+    console.log("se ha ejecutado el endpoint probando");
+
+    return res.status(200).json([
+        {
+            curso: "Master en Reac",
+            autor: "Pedro Landauro WEB",
+            url: "pedrolandaurowe.es/master-react"
+        },
+        {
+            curso: "Master en Reac",
+            autor: "Pedro Landauro WEB",
+            url: "pedrolandaurowe.es/master-react"
+        }
+    ]);
+});
+
+app.get("/", (req, res) => {
+    return res.status(200).send(
+        "<h1>Empezando a crear un api rest con NodeJS</h1>"
+    );
+});
 
 //crear servidor y escuchar peticiones http
 app.listen(port, () => {
