@@ -23,7 +23,12 @@ app.use(cors());
 //usamos middwlware del cors
 app.use(express.json());
 
-//Crear rutas
+//Rutaas
+const routes_article = require("./routes/articleRoutes");
+//cargando las rutas
+app.use("/api", routes_article);
+
+//Rutas de prueba harcodeads
 app.get("/probando", (req, res) => {
     console.log("se ha ejecutado el endpoint probando");
 
