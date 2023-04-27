@@ -21,7 +21,8 @@ app.use(cors());
 
 //converstir Body a Objetos JS
 //usamos middwlware del cors
-app.use(express.json());
+app.use(express.json()); // esto tbn es para recibir datos con ContentType
+app.use(express.urlencoded({extended:true})) //form url encoded
 
 //Rutaas
 const routes_article = require("./routes/articleRoutes");
